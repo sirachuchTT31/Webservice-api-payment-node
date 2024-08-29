@@ -1,0 +1,25 @@
+{
+  "name": "webservice-api-payment-node",
+  "version": "1.0.0",
+  "main": "server.js",
+  "prisma": {
+    "schema": "node_modules/database-sdk/prisma/schema.prisma"
+  },
+  "scripts": {
+    "start": "nodemon server.ts",
+    "install-common": "npm install  git+https://github.com/sirachuchTT31/Webservice-common-sdk-node.git",
+    "install-database": "npm install git+https://github.com/sirachuchTT31/Webservice-database-sdk-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "database-sdk": "github:sirachuchTT31/Webservice-database-sdk-node",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "nodemon": "^3.1.4",
+    "prisma": "^5.18.0"
+  }
+}
