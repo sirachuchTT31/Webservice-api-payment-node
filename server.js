@@ -7,11 +7,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
-app.get("/", (req, res) => {
-    res.json({ message: "Server Running." });
+app.get("/api/payment", (req, res) => {
+    res.json({ message: "Server Running payment gateway" });
 });
 
-// app.use('/api/auth' , require('./src/routes/auth.route'));
+app.use('/api/payment' , require('./src/routes/payment.route'));
 
 const PORT = 8003;
 app.listen(PORT, () => {
